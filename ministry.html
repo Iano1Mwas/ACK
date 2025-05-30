@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACK St. John's Happy Valley Parish Thika</title>
+    <link href="fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=EB+Garamond:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/logo.png" type="image/x-icon">
+
+    <!-- ...existing code... -->
+<style>
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #0a2342 60%, #1e3359 100%);
+        color: #f2f6fc;
+        transition: background 0.6s;
+    }
+    .main-header {
+        background: linear-gradient(90deg, #183153 60%, #274472 100%);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        padding: 0;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 80px;
+    }
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .logo-area img {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        border: 2px solid #fff;
+        background: #fff;
+        margin-bottom: 0;
+    }
+    .site-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 8px #183153;
+    }
+    .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    .main-nav a {
+        color: #f2f6fc;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .main-nav a:hover, .main-nav .active {
+        background: #274472;
+        color: #ffd700;
+    }
+    .contact-btn {
+        background: #ffd700;
+        color: #183153 !important;
+        font-weight: bold;
+        border-radius: 20px;
+        padding: 8px 22px;
+        margin-left: 10px;
+        transition: background 0.2s, color 0.2s;
+        border: none;
+        cursor: pointer;
+    }
+    .contact-btn:hover {
+        background: #fffbe6;
+        color: #274472 !important;
+    }
+    .hero-banner {
+        background: linear-gradient(90deg, #274472 60%, #102542 100%);
+        color: #fff;
+        padding: 50px 20px 40px 20px;
+        text-align: center;
+        box-shadow: 0 2px 16px #0a2342;
+    }
+    .hero-banner h2 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+        color: #ffd700;
+        text-shadow: 0 2px 8px #183153;
+    }
+    .hero-banner p {
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+        color: #f2f6fc;
+    }
+    .cta-btn {
+        background: #fff;
+        color: #274472;
+        border: none;
+        padding: 12px 32px;
+        font-size: 1.1rem;
+        border-radius: 24px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition: background 0.2s, color 0.2s;
+    }
+    .cta-btn:hover {
+        background: #b7e4c7;
+        color: #1a2b1f;
+    }
+    .info-section {
+        display: flex;
+        justify-content: space-around;
+        gap: 24px;
+        margin: 40px auto 0 auto;
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+    .info-card {
+        background: #1e3359;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        padding: 28px 18px;
+        flex: 1;
+        min-width: 220px;
+        text-align: center;
+        border: 1px solid #274472;
+    }
+    .info-card h3 {
+        color: #ffd700;
+        margin-bottom: 10px;
+    }
+    .info-card p {
+        color: #f2f6fc;
+        font-size: 1rem;
+    }
+    .gallery {
+        margin: 50px auto 0 auto;
+        max-width: 900px;
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .gallery img {
+        width: 260px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #183153;
+        border: 2px solid #274472;
+        background: #fff;
+    }
+    .video-section {
+        margin: 40px auto 0 auto;
+        max-width: 700px;
+        text-align: center;
+    }
+    .video-section h2 {
+        color: #ffd700;
+    }
+    .video-section video {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px #183153;
+        border: 2px solid #274472;
+        background: #000;
+    }
+    footer {
+        text-align: center;
+        padding: 18px 0;
+        background: linear-gradient(90deg, #183153 60%, #274472 100%);
+        color: #ffd700;
+        margin-top: 50px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        border-top: 2px solid #274472;
+    }
+    .clubs-section {
+        margin: 40px auto;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+    .clubs-section h2 {
+        text-align: center;
+        color: #ffd700;
+        margin-bottom: 24px;
+    }
+    .clubs-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+        margin-bottom: 60px; /* Add space for tooltips */
+        position: relative;  /* Ensure stacking context */
+        z-index: 1;
+    }
+    .club-card {
+        background: #1e3359;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        padding: 24px 16px;
+        flex: 1;
+        min-width: 220px;
+        text-align: center;
+        border: 1px solid #274472;
+        cursor: pointer;
+        transition: 
+            transform 0.2s,
+            box-shadow 0.3s,
+            border-color 0.3s;
+        position: relative;
+        overflow: visible;
+        z-index: 1; /* Ensure stacking context for each card */
+    }
+    .club-card h3 {
+        color: #ffd700;
+        font-size: 1.4rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 0 0 8px #ffd700, 0 2px 8px #183153;
+        margin-bottom: 10px;
+        z-index: 2;
+        position: relative;
+    }
+    .club-card p {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%) translateY(18px); /* Always show below */
+        background: rgba(30,51,89,0.98);
+        color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        box-shadow: 0 4px 24px #183153;
+        width: 260px;
+        max-width: 90vw;
+        font-size: 1rem;
+        pointer-events: none;
+        transition: opacity 0.3s, transform 0.3s;
+        z-index: 1000; /* Make sure tooltip is on top of all cards */
+        border: 1px solid #ffd700;
+    }
+    .club-card:hover,
+    .club-card:focus-within {
+        z-index: 2000; /* Bring hovered card above others */
+    }
+    .club-card:hover p,
+    .club-card:focus-within p {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    /* Hide the info text by default in mobile, show on tap */
+    @media (max-width: 700px) {
+        .club-card p {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            background: none;
+            color: #f2f6fc;
+            box-shadow: none;
+            border: none;
+            padding: 0;
+            width: 100%;
+            transform: none;
+        }
+    }
+    @media (max-width: 900px) {
+        .info-section {
+            flex-direction: column;
+            gap: 18px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 350px;
+        }
+        .clubs-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media (max-width: 700px) {
+        .nav-container {
+            flex-direction: column;
+            height: auto;
+            padding: 10px 8px;
+            gap: 8px;
+        }
+        .main-nav {
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .site-title {
+            font-size: 1.1rem;
+        }
+    }
+</style>
+<!-- ...existing code continues... -->
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="Images/logo.png" alt="ACK Logo">
+                <div class="site-title">ACK St. John's Happy Valley Parish Thika</div>
+            </div>
+            <!-- Use this navigation for all your pages -->
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="ministry.html" class="active">Ministries</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+                <button class="contact-btn" onclick="window.location.href='contact.html'">Join Us This Sunday</button>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-banner">
+        <h2>Rooted in Christ, Growing in Faith</h2>
+        <p>Welcome to ACK St. John's Happy Valley Parish Thika. We are a vibrant Anglican community dedicated to worship, service, and spiritual growth. Join us as we journey together in faith and love.</p>
+    </section>
+    <section class="info-section">
+        <div class="info-card">
+            <h3>Our Mission</h3>
+            <p>To proclaim the Gospel, nurture believers, and serve our community with compassion and integrity.</p>
+        </div>
+        <div class="info-card">
+            <h3>Service Times</h3>
+            <p>Sunday Worship: 8:00am &amp; 10:30am<br>Midweek Fellowship: Wednesdays 6:00pm</p>
+        </div>
+        <div class="info-card">
+            <h3>Get Involved</h3>
+            <p>Discover ministries for all ages and find your place to serve, connect, and grow.</p>
+        </div>
+    </section>
+    <section class="clubs-section">
+        <h2 style="text-align:center; color:#ffd700; margin-top:40px;">Ministries & Clubs</h2>
+        <div class="clubs-container">
+            <a href="mu.html" class="club-card">
+                <h3>Mothers Union (MU)</h3>
+                <p>The Mothers Union is a fellowship of Christian women dedicated to prayer, service, and supporting families in the church and community.</p>
+            </a>
+            <a href="kama.html" class="club-card">
+                <h3>KAMA</h3>
+                <p>KAMA (Kenya Anglican Men’s Association) brings together men for spiritual growth, mentorship, and community service.</p>
+            </a>
+            <a href="brigade.html" class="club-card">
+                <h3>Brigade</h3>
+                <p>The Brigade nurtures discipline, leadership, and Christian values among children and youth through fun and structured activities.</p>
+            </a>
+            <a href="sundayschool.html" class="club-card">
+                <h3>Sunday School</h3>
+                <p>Sunday School provides a loving environment for children to learn about Jesus and grow in faith through stories, songs, and crafts.</p>
+            </a>
+            <a href="youth.html" class="club-card">
+                <h3>Youth</h3>
+                <p>The Youth ministry empowers young people to live out their faith, develop leadership skills, and serve the church and society.</p>
+            </a>
+        </div>
+    </section>
+    <footer>
+    <section class="gallery">
+        <img src="Images/church pic.jpg" alt="Church Building">
+    </section>
+   
+   
+        &copy; 2025 ACK St. John's Happy Valley Parish Thika. All rights reserved.
+    </footer>
+    <script>
+        // No JavaScript needed for navigation
+    </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMA</title>
+     <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a2342 60%, #1e3359 100%);
+            color: #f2f6fc;
+            transition: background 0.6s;
+        }
+        .main-header {
+            background: linear-gradient(90deg, #183153 60%, #274472 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            padding: 0;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 80px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-area img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px solid #fff;
+            background: #fff;
+            margin-bottom: 0;
+        }
+        .site-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px #183153;
+        }
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .main-nav a {
+            color: #f2f6fc;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .main-nav a:hover, .main-nav .active {
+            background: #274472;
+            color: #ffd700;
+        }
+        .contact-btn {
+            background: #ffd700;
+            color: #183153 !important;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 8px 22px;
+            margin-left: 10px;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-btn:hover {
+            background: #fffbe6;
+            color: #274472 !important;
+        }
+        .hero-banner {
+            background: linear-gradient(90deg, #274472 60%, #102542 100%);
+            color: #fff;
+            padding: 60px 20px 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 16px #0a2342;
+        }
+        .hero-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: #ffd700;
+            text-shadow: 0 2px 8px #183153;
+        }
+        .hero-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            color: #f2f6fc;
+        }
+        .cta-btn {
+            background: #ffd700;
+            color: #183153;
+            border: none;
+            padding: 14px 36px;
+            font-size: 1.15rem;
+            border-radius: 24px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s, color 0.2s;
+        }
+        .cta-btn:hover {
+            background: #fffbe6;
+            color: #274472;
+        }
+        .info-section {
+            display: flex;
+            justify-content: space-around;
+            gap: 24px;
+            margin: 40px auto 0 auto;
+            max-width: 1000px;
+            padding: 0 20px;
+        }
+        .info-card {
+            background: #1e3359;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            padding: 28px 18px;
+            flex: 1;
+            min-width: 220px;
+            text-align: center;
+            border: 1px solid #274472;
+        }
+        .info-card h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        .info-card p {
+            color: #f2f6fc;
+            font-size: 1rem;
+        }
+        .gallery {
+            margin: 50px auto 0 auto;
+            max-width: 900px;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 260px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #183153;
+            border: 2px solid #274472;
+            background: #fff;
+        }
+        .map-section {
+            margin: 60px auto 0 auto;
+            max-width: 900px;
+            text-align: center;
+        }
+        .map-section h2 {
+            color: #ffd700;
+            margin-bottom: 18px;
+        }
+        .map-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px #183153;
+            border: 2px solid #274472;
+        }
+        footer {
+            text-align: center;
+            padding: 18px 0;
+            background: linear-gradient(90deg, #183153 60%, #274472 100%);
+            color: #ffd700;
+            margin-top: 50px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border-top: 2px solid #274472;
+        }
+        @media (max-width: 900px) {
+            .info-section {
+                flex-direction: column;
+                gap: 18px;
+            }
+            .gallery img {
+                width: 100%;
+                max-width: 350px;
+            }
+            .map-container {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 700px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 8px;
+                gap: 8px;
+            }
+            .main-nav {
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            .site-title {
+                font-size: 1.1rem;
+            }
+            .hero-banner h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="Images/logo.png" alt="ACK Logo">
+                <div class="site-title">ACK St. John's Happy Valley Parish Thika</div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="ministry.html">Ministries</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+                <button class="contact-btn" onclick="window.location.href='contact.html'">Join Us This Sunday</button>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-banner">
+        <h1>KAMA (Kenya Anglican Men’s Association)</h1>
+        <p>
+            KAMA brings together men for spiritual growth, mentorship, and community service. Our mission is to empower men to be Christ-like leaders in their families, church, and society.
+        </p>
+    </section>
+    <section class="info-section">
+        <div class="info-card">
+            <h3>Our Vision</h3>
+            <p>To nurture men who are rooted in faith, integrity, and service to God and community.</p>
+        </div>
+        <div class="info-card">
+            <h3>Activities</h3>
+            <p>
+                - Bible study and prayer meetings<br>
+                - Mentorship programs<br>
+                - Community outreach and charity<br>
+                - Family enrichment seminars<br>
+                - Church projects and support
+            </p>
+        </div>
+        <div class="info-card">
+            <h3>Join Us</h3>
+            <p>
+                All men are welcome! For more information, contact the parish office or visit us during our next meeting.
+            </p>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 ACK St. John's Happy Valley Parish Thika. All rights reserved.
+    </footer>
+</body>
+</html>

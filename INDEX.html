@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACK St. John's Happy Valley Parish Thika</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=EB+Garamond:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/logo.png" type="image/x-icon">
+    <!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a2342 60%, #1e3359 100%);
+            color: #f2f6fc;
+            transition: background 0.6s;
+        }
+        .main-header {
+            background: linear-gradient(90deg, #183153 60%, #274472 100%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            padding: 0;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 80px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-area img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px solid #fff;
+            background: #fff;
+            margin-bottom: 0;
+        }
+        .site-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px #183153;
+        }
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .main-nav a {
+            color: #f2f6fc;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .main-nav a:hover, .main-nav .active {
+            background: #274472;
+            color: #ffd700;
+        }
+        .contact-btn {
+            background: #ffd700;
+            color: #183153 !important;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 8px 22px;
+            margin-left: 10px;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-btn:hover {
+            background: #fffbe6;
+            color: #274472 !important;
+        }
+        .hero-banner {
+            background: linear-gradient(90deg, #274472 60%, #102542 100%);
+            color: #fff;
+            padding: 60px 20px 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 16px #0a2342;
+        }
+        .hero-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: #ffd700;
+            text-shadow: 0 2px 8px #183153;
+        }
+        .hero-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            color: #f2f6fc;
+        }
+        .cta-btn {
+            background: #ffd700;
+            color: #183153;
+            border: none;
+            padding: 14px 36px;
+            font-size: 1.15rem;
+            border-radius: 24px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s, color 0.2s;
+        }
+        .cta-btn:hover {
+            background: #fffbe6;
+            color: #274472;
+        }
+        .info-section {
+            display: flex;
+            justify-content: space-around;
+            gap: 24px;
+            margin: 40px auto 0 auto;
+            max-width: 1000px;
+            padding: 0 20px;
+        }
+        .info-card {
+            background: #1e3359;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+            padding: 28px 18px;
+            flex: 1;
+            min-width: 220px;
+            text-align: center;
+            border: 1px solid #274472;
+        }
+        .info-card h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        .info-card p {
+            color: #f2f6fc;
+            font-size: 1rem;
+        }
+        .gallery {
+            margin: 50px auto 0 auto;
+            max-width: 900px;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 260px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #183153;
+            border: 2px solid #274472;
+            background: #fff;
+        }
+        .map-section {
+            margin: 60px auto 0 auto;
+            max-width: 900px;
+            text-align: center;
+        }
+        .map-section h2 {
+            color: #ffd700;
+            margin-bottom: 18px;
+        }
+        .map-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px #183153;
+            border: 2px solid #274472;
+        }
+        footer {
+            text-align: center;
+            padding: 18px 0;
+            background: linear-gradient(90deg, #183153 60%, #274472 100%);
+            color: #ffd700;
+            margin-top: 50px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border-top: 2px solid #274472;
+        }
+        .corner-email-box {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 3000;
+    width: 340px;
+    max-width: 90vw;
+    background: #1e3359;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 4px 24px #183153;
+    border: 2px solid #ffd700;
+    padding: 0;
+    transition: box-shadow 0.2s, opacity 0.2s;
+    opacity: 0.85;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.corner-email-box .toggle-email-box {
+    background: #ffd700;
+    color: #183153;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin: 12px;
+    box-shadow: 0 2px 8px #183153;
+    transition: background 0.2s;
+    align-self: flex-end;
+    z-index: 2;
+}
+.corner-email-box .toggle-email-box:hover {
+    background: #fffbe6;
+}
+.corner-email-box .email-form {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 18px 18px 12px 18px;
+    box-sizing: border-box;
+    background: #1e3359;
+    border-radius: 0 0 12px 12px;
+}
+.corner-email-box.open .email-form {
+    display: flex;
+}
+.corner-email-box.open {
+    opacity: 1;
+}
+.corner-email-box .email-form h4 {
+    margin: 0 0 10px 0;
+    color: #ffd700;
+    font-size: 1.1rem;
+    text-align: left;
+}
+.corner-email-box .email-form input,
+.corner-email-box .email-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #274472;
+    background: #f2f6fc;
+    color: #183153;
+    font-size: 1rem;
+    resize: none;
+    font-family: inherit;
+}
+.corner-email-box .email-form button[type="submit"] {
+    background: #ffd700;
+    color: #183153;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 22px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background 0.2s;
+}
+.corner-email-box .email-form button[type="submit"]:hover {
+    background: #fffbe6;
+}
+@media (max-width: 600px) {
+    .corner-email-box {
+        width: 98vw;
+        right: 1vw;
+        bottom: 1vw;
+        border-radius: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="Images/logo.png" alt="ACK Logo">
+                <div class="site-title">ACK St. John's Happy Valley Parish Thika</div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="ministry.html">Ministries</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+                <button class="contact-btn" onclick="window.location.href='contact.html'">Join Us This Sunday</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-banner">
+        <h1>Welcome to ACK St. John's Happy Valley Parish Thika</h1>
+        <p>
+            Rooted in Christ, Growing in Faith.<br>
+            We are a vibrant Anglican community dedicated to worship, service, and spiritual growth.<br>
+            Join us as we journey together in faith and love.
+        </p>
+        <button class="cta-btn" onclick="window.location.href='about.html'">Learn More About Us</button>
+    </section>
+    <!-- Church Events Image Slider -->
+    <!-- Image Slider Section -->
+<div id="wowslider-container1">
+    <div class="ws_images">
+        <ul>
+            <li><img src="Images/church pic.jpg" alt="Church Building" title="Church Building" id="wows1_0"/></li>
+            <li><img src="Images/Church Leaders.jpg" alt="Church Leaders" title="Church Leaders" id="wows1_1"/></li>
+            <li><img src="Images/Youth department.jpg" alt="Youth Department" title="Youth Department" id="wows1_2"/></li>
+        </ul>
+    </div>
+    <div class="ws_bullets">
+        <div>
+            <a href="#" title="Church Building"><span><img src="Images/church pic.jpg" alt="Church Building"/>1</span></a>
+            <a href="#" title="Church Leaders"><span><img src="Images/Church Leaders.jpg" alt="Church Leaders"/>2</span></a>
+            <a href="#" title="Youth Department"><span><img src="Images/Youth department.jpg" alt="Youth Department"/>3</span></a>
+        </div>
+    </div>
+    <div class="ws_shadow"></div>
+</div>
+<script src="engine1/jquery.js"></script>
+<script src="engine1/wowslider.js"></script>
+<script src="engine1/script.js"></script>
+    <section class="info-section">
+        <div class="info-card">
+            <h3>Our Mission</h3>
+            <p>To proclaim the Gospel, nurture believers, and serve our community with compassion and integrity.</p>
+        </div>
+        <div class="info-card">
+            <h3>Service Times</h3>
+            <p>
+                Sunday Worship: 8:00am &amp; 10:30am<br>
+                Midweek Fellowship: Wednesdays 6:00pm
+            </p>
+        </div>
+        <div class="info-card">
+            <h3>Get Involved</h3>
+            <p>Discover ministries for all ages and find your place to serve, connect, and grow.</p>
+        </div>
+    </section>
+    <section class="gallery">
+        <img src="Images/church pic.jpg" alt="Church Building">
+        <img src="Images/Church Leaders.jpg" alt="Church Leaders">
+        <img src="Images/Youth department.jpg" alt="Youth Department">
+    </section>
+    <section class="map-section">
+        <h2>Find Us Here</h2>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps?q=ACK+St.+John's+Happy+Valley+Parish+Thika&output=embed"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="ACK St. John's Happy Valley Parish Thika Location"></iframe>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 ACK St. John's Happy Valley Parish Thika. All rights reserved.
+    </footer>
+    <div class="corner-email-box" id="cornerEmailBox">
+    <button class="toggle-email-box" onclick="document.getElementById('cornerEmailBox').classList.toggle('open')">
+        <span>&#9993;</span>
+    </button>
+    <form class="email-form" action="mailto:karanja@gmail.com" method="POST" enctype="text/plain">
+        <h4>Contact for Guidance</h4>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="How can we help you?" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+<!-- Optional: close the box when clicking outside -->
+<script>
+document.addEventListener('click', function(e) {
+    var box = document.getElementById('cornerEmailBox');
+    if (!box.contains(e.target) && box.classList.contains('open')) {
+        box.classList.remove('open');
+    }
+});
+</script>
+</body>
+</html>

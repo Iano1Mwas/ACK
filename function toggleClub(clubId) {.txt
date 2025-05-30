@@ -1,0 +1,7 @@
+function toggleClub(clubId) {
+    // Collapse all
+    document.querySelectorAll('.club-card').forEach(card => card.classList.remove('active'));
+    // Expand the clicked one
+    const card = document.getElementById(clubId).parentElement;
+    card.classList.toggle('active');
+}

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACK St. John's Happy Valley Parish Thika</title>
+    <link href="fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=EB+Garamond:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <style>
+        body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #0a2342 60%, #1e3359 100%);
+        color: #f2f6fc;
+        transition: background 0.6s;
+    }
+    .main-header {
+        background: linear-gradient(90deg, #183153 60%, #274472 100%);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        padding: 0;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: 80px;
+    }
+    .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .logo-area img {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        border: 2px solid #fff;
+        background: #fff;
+        margin-bottom: 0;
+        box-shadow: 0 2px 12px #ffd70080;
+    }
+    .site-title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #ffd700;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 8px #183153, 0 0 4px #ffd70080;
+    }
+    .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    .main-nav a {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .main-nav a:hover, .main-nav .active {
+        background: #ffd700;
+        color: #274472;
+        box-shadow: 0 2px 8px #ffd70080;
+    }
+    .contact-btn {
+        background: #ffd700;
+        color: #183153 !important;
+        font-weight: bold;
+        border-radius: 20px;
+        padding: 8px 22px;
+        margin-left: 10px;
+        transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 8px #ffd70080;
+    }
+    .contact-btn:hover {
+        background: #fffbe6;
+        color: #274472 !important;
+        box-shadow: 0 2px 12px #ffd70080;
+    }
+    .hero-banner {
+        background: linear-gradient(90deg, #274472 60%, #ffd700 100%);
+        color: #183153;
+        padding: 50px 20px 40px 20px;
+        text-align: center;
+        box-shadow: 0 2px 16px #0a2342;
+        border-bottom: 4px solid #ffd700;
+    }
+    .hero-banner h2 {
+        font-size: 2.3rem;
+        margin-bottom: 12px;
+        color: #ffd700;
+        text-shadow: 0 2px 8px #183153, 0 0 8px #fffbe6;
+        letter-spacing: 1px;
+    }
+    .hero-banner p {
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+        color: #183153;
+        background: #fffbe6cc;
+        display: inline-block;
+        padding: 10px 24px;
+        border-radius: 18px;
+        box-shadow: 0 2px 8px #ffd70040;
+    }
+    .info-section {
+        display: flex;
+        justify-content: space-around;
+        gap: 24px;
+        margin: 40px auto 0 auto;
+        max-width: 1000px;
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+    .info-card {
+        background: linear-gradient(135deg, #ffd700 60%, #fffbe6 100%);
+        border-radius: 14px;
+        box-shadow: 0 2px 16px #ffd70040;
+        padding: 28px 18px;
+        flex: 1;
+        min-width: 220px;
+        text-align: center;
+        border: 2px solid #ffd700;
+        margin-bottom: 18px;
+        color: #183153;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .info-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 8px 32px #ffd70080;
+    }
+    .info-card h3 {
+        color: #b22222;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+    .info-card p {
+        color: #183153;
+        font-size: 1.08rem;
+    }
+    .gallery {
+        margin: 50px auto 0 auto;
+        max-width: 900px;
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .gallery img {
+        width: 260px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px #ffd70080;
+        border: 2px solid #ffd700;
+        background: #fff;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .gallery img:hover {
+        transform: scale(1.05) rotate(-2deg);
+        box-shadow: 0 8px 32px #ffd700cc;
+    }
+    .video-section {
+        margin: 40px auto 0 auto;
+        max-width: 700px;
+        text-align: center;
+    }
+    .video-section h2 {
+        color: #ffd700;
+        text-shadow: 0 2px 8px #183153;
+        margin-bottom: 18px;
+    }
+    .video-section video {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 14px;
+        box-shadow: 0 2px 16px #ffd70080;
+        border: 2px solid #ffd700;
+        background: #000;
+    }
+    .figure-caption {
+        color: #ffd700;
+        font-size: 1.05rem;
+        margin-top: 6px;
+        text-shadow: 0 1px 4px #183153;
+    }
+    h2, h3, h4 {
+        color: #ffd700;
+        text-shadow: 0 2px 8px #183153;
+    }
+    table {
+        background: #fffbe6;
+        color: #183153;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #ffd70040;
+        margin-bottom: 18px;
+    }
+    th, td {
+        border: 2px solid #ffd700 !important;
+        padding: 8px !important;
+    }
+    th {
+        background: #ffd700;
+        color: #b22222;
+    }
+    caption {
+        color: #b22222;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+    ul, ol {
+        background: #fffbe6cc;
+        color: #183153;
+        border-radius: 8px;
+        padding: 12px 24px;
+        margin-bottom: 18px;
+        box-shadow: 0 2px 8px #ffd70040;
+    }
+    li {
+        margin-bottom: 6px;
+    }
+    /* Responsive styles */
+    @media (max-width: 900px) {
+        .info-section {
+            flex-direction: column;
+            gap: 18px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
+    @media (max-width: 700px) {
+        .nav-container {
+            flex-direction: column;
+            height: auto;
+            padding: 10px 8px;
+            gap: 8px;
+        }
+        .main-nav {
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .site-title {
+            font-size: 1.1rem;
+        }
+        .hero-banner h2 {
+            font-size: 1.3rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="Images/logo.png" alt="ACK Logo">
+                <div class="site-title">ACK St. John's Happy Valley Parish Thika</div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="ministry.html">Ministries</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+                <button class="contact-btn" onclick="window.location.href='contact.html'">Join Us This Sunday</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- WOWSlider placed directly below the navigation bar, matching index.html -->
+    <!-- Start WOWSlider.com BODY section -->
+    <div id="wowslider-container1">
+        <div class="ws_images">
+            <ul>
+                <li><img src="Images/church pic.jpg" alt="Church Building" title="Church Building" id="wows1_0"/></li>
+                <li><img src="Images/Church Leaders.jpg" alt="Church Leaders" title="Church Leaders" id="wows1_1"/></li>
+                <li><img src="Images/Youth department.jpg" alt="Youth Department" title="Youth Department" id="wows1_2"/></li>
+            </ul>
+        </div>
+        <div class="ws_bullets">
+            <div>
+                <a href="#" title="Church Building"><span><img src="Images/church pic.jpg" alt="Church Building"/>1</span></a>
+                <a href="#" title="Church Leaders"><span><img src="Images/Church Leaders.jpg" alt="Church Leaders"/>2</span></a>
+                <a href="#" title="Youth Department"><span><img src="Images/Youth department.jpg" alt="Youth Department"/>3</span></a>
+            </div>
+        </div>
+        <div class="ws_shadow"></div>
+    </div>
+    <!-- End WOWSlider.com BODY section -->
+    <script type="text/javascript" src="engine1/wowslider.js"></script>
+    <script type="text/javascript" src="engine1/script.js"></script>
+
+    <section class="hero-banner">
+        <h2>Rooted in Christ, Growing in Faith</h2>
+        <p>Welcome to ACK St. John's Happy Valley Parish Thika. We are a vibrant Anglican community dedicated to worship, service, and spiritual growth. Join us as we journey together in faith and love.</p>
+    </section>
+    <!-- Start WOWSlider.com BODY section -->
+<!-- End WOWSlider.com BODY section -->
+    <!-- Add your subtitles and paragraphs here -->
+    <section style="max-width: 900px; margin: 32px auto 0 auto; padding: 0 20px;">
+
+
+
+        <h4> Introduction</h4>
+        <p>The ACK St. John Happy Valley Parish identity is defined through its Vision, Mission and Core Values. The three amplify the focus to serve God and His people and they will be the ‘Light of the Parish’ for the next five (5) years.</p>
+        <h4> Vision</h4>
+        <p>To be a vibrant Anglican Church that is Christ-centered, Spirit-filled and committed to transforming lives.A Christ-Centred Parish for holistic growth.</p>
+        <h4> Mission</h4>
+        <p>Proclaim the Gospel to achieve God’s purpose.</p>
+        <h4> Core Values</h4>
+        
+        <ul style="margin-left: 24px; margin-bottom: 18px;">
+            <li><strong>Integrity:</strong>We uphold the tenets of honesty and truth while serving our congregants, partners, internal and external stakeholders and promote these values as enshrined in the Gospel.</li>
+            <li><strong>Commitment:</strong>We serve all our members and the community equally and impartially with total devotion and strive to express care and love to the disadvantaged in the society.</li>
+            <li><strong>Stewardship:</strong>We keep custody of the resources entrusted to us and prudently manage them for the Parish to achieve the desired results.</li>
+            <li><strong>Evangelism:</strong>Evangelism is the cornerstone of the Parish and we are dedicated to serve our members and reach out to the community with the teachings of Jesus Christ our saviour. </li>
+            <li><strong>Cohesion:</strong>We foster unity amongst our members as a means to achieve holistic growth of the Parish.</li>
+        </ul>
+        
+        <h4 style="text-align:center; font-weight:bold; text-decoration:underline;">OUR HISTORY</h4>
+        <p>History of the Parish
+
+The ACK St. John’s Happy Valley Parish, (here in after referred to as The Parish), is located in Happy Valley Estate, Kamenu Location, Thika West Sub-County in Kiambu County. It is about 10km from Thika town off Thika-Garissa road. 
+
+The Parish started in February 1997 as a small church in Makongeni Parish with a membership of four (4) ladies in a rented open plot. The congregation continued to grow and in August 1997 the members made a decision to search for a plot and build a Church. A Building Committee was formed to undertake the task. A funds drive was conducted in August 1998 where Two Hundred and Fifty Thousand Kenya Shillings (KShs. 250,000) was realised and a plot was purchased. The congregants continued with their determination by conducting periodical fund raisers and construction of the Church (currently the Church Hall) commenced in May 2000 and was completed in March 2001 and remained under Makongeni Parish. The dedication stone was laid on 6th April 2001 and unveiled on 13th August 2006 by Rt. Rev. Dr. Gideon G. Githiga, the then Bishop of ACK Thika Diocese. The Church continued to attract more worshippers and by May 2001 it was almost full.
+The growth in membership prompted the elders to focus on the future in view of the rapid increase in population in the estate. A decision was, therefore, made to search for a bigger plot to build a Church that could match the increase in number of congregants and future growth of the estate.
+In 2001, the Building Committee’s mandate was expanded to include all aspects of Church development and renamed the Development Committee. The chairman of the committee was mandated to search for a plot and by the Grace of God a bigger one adjacent to the Church was available at a negotiated price of Kshs 520,000. A fund raiser conducted in November 2003 raised Kshs 450,000 for the purchase of the plot. The remaining amount was borrowed from the members and the plot was bought and transferred to the Church.  
+In 2006, the chairman of the Development Committee and some of the members visited ACK Kahawa Sukari Church for benchmarking. After the visit, the team embarked on designing a modern Church, planning and fund raising for its construction. Periodical fund raisers were conducted for the construction works as follows:
+        </p>
+        <h4>Main Fund-raising Events</h4>
+        <table style="width:100%; border-collapse:collapse; margin-bottom:16px;">
+            <thead>
+                <tr style="background:#ffd700; color:#b22222;">
+                    <th style="border:1px solid #b22222; padding:6px;">Year</th>
+                    <th style="border:1px solid #b22222; padding:6px;">Amount (Kshs) in Millions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border:1px solid #b22222; padding:6px;">2007-2010</td>
+                    <td style="border:1px solid #b22222; padding:6px;">8.7</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #b22222; padding:6px;">2014</td>
+                    <td style="border:1px solid #b22222; padding:6px;">12.5</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #b22222; padding:6px;">2015</td>
+                    <td style="border:1px solid #b22222; padding:6px;">10.3</td>
+                </tr>
+                <tr>
+                    <td style="border:1px solid #b22222; padding:6px;">2017</td>
+                    <td style="border:1px solid #b22222; padding:6px;">11.5</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h4>Diocesan Bishop Unveiling the Consecration Plaque</h4>
+
+        <div style="text-align:center; margin: 32px 0;">
+            <img src="Images/Bishop.jpg" alt="Diocesan Bishop Unveiling the Consecration Plaque" class="figure-img animated-img" style="max-width:100%;" loading="lazy">
+            <div class="figure-caption">
+                <strong></strong> Diocesan Bishop Unveiling the Consecration Plaque
+            </div>
+        </div>
+        <p>The foundation stone was laid by Rt. Rev. Julius Wanyoike, Bishop of Thika Diocese on 22nd November 2015.The overwhelming support by the congregants and well-wishers during these organised fund raisers ensured the Church construction progressed very well and by 2018 the major works had been completed. A consecration ceremony was conducted on 18th February 2018 presided over by Rt. Rev. Dr. Julius Wanyoike, Bishop Thika Diocese. The Church has a capacity of 1,200, out of which 900 can be accommodated in the in the ground floor while 300 can sit in the balcony. Currently the Parish is a fully fledged one Church Parish</p>
+        
+    
+        
+        <div style="text-align:center; margin: 32px 0;">
+            <img 
+                src="Images/Church interior.jpg" 
+                srcset="Images/Church interior-8k.jpg 7680w, Images/Church interior.jpg 1800w"
+                alt=" Main Sanctuary" 
+                class="figure-img animated-img"
+                style="width:100%; max-width:3840px; height:auto; display:block; margin:auto;"
+                loading="lazy"
+            >
+            <div class="figure-caption">
+                <strong></strong> Main Sanctuary
+            </div>
+        </div>
+        <h4>Governance Structure</h4>
+        <p>A formal structure exists to ensure successful operations and management of the Parish. In the Anglican setting, the Bishop is the head of the Diocese and the Vicar heads the Parish. The Parish’s operations have been structured into departments and committees that work closely with each other as many parts but one body of the Church; to ensure smooth running of all Parish activities. The Parish Church Council (PCC) provides the overall management of Parish programmes and affairs ranging from spiritual to administrative duties. Currently, six (6) departments have been very instrumental to the spiritual growth and infrastructure development of the Parish. These are:
+        </p>
+        <h4>Departments</h4>
+        <ul style="margin-left: 24px; margin-bottom: 18px;">
+            <li>Kenya Anglican Men’s Association (KAMA)</li>
+            <li>Mothers’ Union (MU)</li>
+            <li>Kenya Anglican Youth Organisation (KAYO)</li>
+            <li>Children’s Ministry – Sunday School and Brigade</li>
+            <li>Choir</li>
+            <li>Praise and Worship</li>
+        </ul>
+        <p>In order to ensure sustainability and accountability, the Parish has various committees charged with different responsibilities. The committees include: 
+<ul style="margin-left: 24px; margin-bottom: 18px;">
+    <li>Executive Committee</li>
+    <li>Finance Committee</li>
+    <li>Development Committee</li>
+</ul>
+In addition, the PCC forms ad-hoc committees on need basis.
+Following an initiative of PCC and the Development Committee, the congregants were divided into four clusters that serve a duo purpose; prayer cells and resource mobilisation. These are: 
+<ul class="decorative-list">
+    <li><span>1.</span> Central</li>
+    <li><span>2.</span> Plains View</li>
+    <li><span>3.</span> Mountain View</li>
+    <li><span>4.</span> Riverside</li>
+</ul>
+In addition, there are two very vibrant but independent associations, the Men’s Welfare and Ladies Welfare. Although their focus is the social welfare of their members, their participation in the development of the Parish has been extremely encouraging. The Men’s Welfare Association, for example, in 2005 donated funds that were used in the construction of two Sunday school classrooms next to the Church Hall.
+</p>
+
+ 
+      
+        <div style="text-align:center; margin: 32px 0;">
+            <img 
+        src="Images/Church Leaders.jpg" 
+        alt=" The Pastoral Team" 
+        class="figure-img animated-img"
+        style="width:100%; max-width:1800px; height:auto; display:block; margin:auto;"
+        loading="lazy"
+    >
+    <div class="figure-caption">
+        <strong></strong> The Pastoral Team
+    </div>
+</div>
+
+<h4>Physical Infrastructure</h4>
+<img 
+        src="Images/KAMA department Presenting a song.jpg" 
+        alt="KAMA Department Presenting a Song" 
+        class="figure-img animated-img"
+        style="width:100%; max-width:1800px; height:auto; display:block; margin:auto;"
+        loading="lazy"
+    >
+    <div class="figure-caption">
+        <strong></strong> KAMA Department Presenting a Song
+    </div>
+<img 
+        src="Images/MU department presenting a song.jpg" 
+        alt="Mothers Union Department Presenting a Song" 
+        class="figure-img animated-img"
+        style="width:100%; max-width:1800px; height:auto; display:block; margin:auto;"
+        loading="lazy"
+    >
+    <div class="figure-caption">
+        <strong></strong> MU Department Presenting a Song
+    </div>
+<img 
+        src="Images/Youth department.jpg" 
+        alt="Youth Department" 
+        class="figure-img animated-img"
+        style="width:100%; max-width:1800px; height:auto; display:block; margin:auto;"
+        loading="lazy"
+    >
+    <div class="figure-caption">
+        <strong></strong> Youth Department
+    </div>
+<img 
+        src="Images/Brigade department.jpg" 
+        alt="Brigade Department" 
+        class="figure-img animated-img"
+        style="width:100%; max-width:1800px; height:auto; display:block; margin:auto;"
+        loading="lazy"
+    >
+    <div class="figure-caption">
+        <strong></strong> Brigade Department
+    </div>
+<img 
+        src="Images/sunday school department.jpg" 
+        alt=" Sunday School Department" 
+        class="figure-img animated-img"
+        style="width:100%; max-width:1800px; height:auto; display:block; margin:auto;"
+        loading="lazy"
+    >
+    <div class="figure-caption">
+        <strong></strong> Sunday School Department
+    </div>
+
+
+
+<!-- Vicar Table -->
+<table style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+    <caption style="caption-side: top; font-weight: bold; color: #b22222; margin-bottom: 6px;">Vicar</caption>
+    <thead>
+        <tr style="background:#ffd700; color:#b22222;">
+            <th style="border:2px solid #b22222; padding:6px;">No.</th>
+            <th style="border:2px solid #b22222; padding:6px;">Name</th>
+            <th style="border:2px solid #b22222; padding:6px;">Period</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td style="border:2px solid #b22222; padding:6px;">1</td><td style="border:2px solid #b22222; padding:6px;">Rev. Gad Karanja</td><td style="border:2px solid #b22222; padding:6px;">1998</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">2</td><td style="border:2px solid #b22222; padding:6px;">Rev. Julius Wanyoike</td><td style="border:2px solid #b22222; padding:6px;">1998-1999</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">3</td><td style="border:2px solid #b22222; padding:6px;">Rev. James Kienye</td><td style="border:2px solid #b22222; padding:6px;">1999 - 2001</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">4</td><td style="border:2px solid #b22222; padding:6px;">Rev. Joshua Ngaruiya</td><td style="border:2px solid #b22222; padding:6px;">2002 - 2004</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">5</td><td style="border:2px solid #b22222; padding:6px;">Rev. Canon Mwangi</td><td style="border:2px solid #b22222; padding:6px;">2004</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">6</td><td style="border:2px solid #b22222; padding:6px;">Canon Habel Gitogo</td><td style="border:2px solid #b22222; padding:6px;">2004 - 2008</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">7</td><td style="border:2px solid #b22222; padding:6px;">Rev. Patrick Mukuna</td><td style="border:2px solid #b22222; padding:6px;">2008 - 2009</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">8</td><td style="border:2px solid #b22222; padding:6px;">Rev. Joyce W. Kabuba</td><td style="border:2px solid #b22222; padding:6px;">2009 - 2012</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">9</td><td style="border:2px solid #b22222; padding:6px;">Rev. Joseph K. Mwangi</td><td style="border:2px solid #b22222; padding:6px;">2012</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">10</td><td style="border:2px solid #b22222; padding:6px;">Rev. John Gitau</td><td style="border:2px solid #b22222; padding:6px;">2012 – 2014</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">11</td><td style="border:2px solid #b22222; padding:6px;">Rev. George Mburu</td><td style="border:2px solid #b22222; padding:6px;">2014 – 2019</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">12</td><td style="border:2px solid #b22222; padding:6px;">Rev. Roise N. Mburu</td><td style="border:2px solid #b22222; padding:6px;">2019 – Up to date</td></tr>
+    </tbody>
+</table>
+
+<!-- Curate / Assistant Minister Table -->
+<table style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+    <caption style="caption-side: top; font-weight: bold; color: #b22222; margin-bottom: 6px;">Curate / Assistant Minister</caption>
+    <thead>
+        <tr style="background:#ffd700; color:#b22222;">
+            <th style="border:2px solid #b22222; padding:6px;">No.</th>
+            <th style="border:2px solid #b22222; padding:6px;">Name</th>
+            <th style="border:2px solid #b22222; padding:6px;">Period</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td style="border:2px solid #b22222; padding:6px;">1</td><td style="border:2px solid #b22222; padding:6px;">Rev. Lucy Njoroge</td><td style="border:2px solid #b22222; padding:6px;">2011 - 2012</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">2</td><td style="border:2px solid #b22222; padding:6px;">Rev. Prisca Njau</td><td style="border:2px solid #b22222; padding:6px;"></td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">3</td><td style="border:2px solid #b22222; padding:6px;">Rev. Peter Ng’ang’a</td><td style="border:2px solid #b22222; padding:6px;">2017 - 2019</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">4</td><td style="border:2px solid #b22222; padding:6px;">Rev. Cornelius Jira</td><td style="border:2px solid #b22222; padding:6px;">2020 – To date</td></tr>
+    </tbody>
+</table>
+
+<!-- Lay Readers Table -->
+<table style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+    <caption style="caption-side: top; font-weight: bold; color: #b22222; margin-bottom: 6px;">Lay Readers</caption>
+    <thead>
+        <tr style="background:#ffd700; color:#b22222;">
+            <th style="border:2px solid #b22222; padding:6px;">No.</th>
+            <th style="border:2px solid #b22222; padding:6px;">Name</th>
+            <th style="border:2px solid #b22222; padding:6px;">Period</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td style="border:2px solid #b22222; padding:6px;">1</td><td style="border:2px solid #b22222; padding:6px;">Robert Kang’ethe</td><td style="border:2px solid #b22222; padding:6px;">2001- 2009</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">2</td><td style="border:2px solid #b22222; padding:6px;">Elijah K. Gachihi</td><td style="border:2px solid #b22222; padding:6px;">2005 – up to date</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">3</td><td style="border:2px solid #b22222; padding:6px;">Norman Mwangi</td><td style="border:2px solid #b22222; padding:6px;">2013 – up to date</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">4</td><td style="border:2px solid #b22222; padding:6px;">Peninnah Mburu</td><td style="border:2px solid #b22222; padding:6px;">2013 – up to date</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">5</td><td style="border:2px solid #b22222; padding:6px;">Margaret Mkanjala Mwangi</td><td style="border:2px solid #b22222; padding:6px;">2013 – up to date</td></tr>
+    </tbody>
+</table>
+
+<!-- Evangelists and Deacons Table -->
+<table style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+    <caption style="caption-side: top; font-weight: bold; color: #b22222; margin-bottom: 6px;">Evangelists and Deacons</caption>
+    <thead>
+        <tr style="background:#ffd700; color:#b22222;">
+            <th style="border:2px solid #b22222; padding:6px;">No.</th>
+            <th style="border:2px solid #b22222; padding:6px;">Name</th>
+            <th style="border:2px solid #b22222; padding:6px;">Period</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td style="border:2px solid #b22222; padding:6px;">1</td><td style="border:2px solid #b22222; padding:6px;">Rev. Samuel Muinamu (Deacon)</td><td style="border:2px solid #b22222; padding:6px;">2007</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">2</td><td style="border:2px solid #b22222; padding:6px;">Ev. Agnes Munene</td><td style="border:2px solid #b22222; padding:6px;">2008-2010</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">3</td><td style="border:2px solid #b22222; padding:6px;">Ev. William Kinuthia</td><td style="border:2px solid #b22222; padding:6px;">2009-2010</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">4</td><td style="border:2px solid #b22222; padding:6px;">Rev Bernard Chutha (Children Minister)</td><td style="border:2px solid #b22222; padding:6px;">2010-2012</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">5</td><td style="border:2px solid #b22222; padding:6px;">Rev Mungai (Deacon)</td><td style="border:2px solid #b22222; padding:6px;">2014</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">6</td><td style="border:2px solid #b22222; padding:6px;">Rev Boniface Kanyi</td><td style="border:2px solid #b22222; padding:6px;">2014</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">7</td><td style="border:2px solid #b22222; padding:6px;">Ev. Samuel Kibiku</td><td style="border:2px solid #b22222; padding:6px;">2015</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">8</td><td style="border:2px solid #b22222; padding:6px;">Ev Monica Wanjiru</td><td style="border:2px solid #b22222; padding:6px;">2015</td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">9</td><td style="border:2px solid #b22222; padding:6px;">Rev Isaac Njoroge (Deacon)</td><td style="border:2px solid #b22222; padding:6px;"></td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">10</td><td style="border:2px solid #b22222; padding:6px;">Ev. Zacharia Chege</td><td style="border:2px solid #b22222; padding:6px;"></td></tr>
+        <tr><td style="border:2px solid #b22222; padding:6px;">11</td><td style="border:2px solid #b22222; padding:6px;">Ev. Mbugua Warui</td><td style="border:2px solid #b22222; padding:6px;"></td></tr>
+    </tbody>
+</table>
+</section>
+
+<footer>
+    &copy; 2025 ACK St. John's Happy Valley Parish Thika. All rights reserved.
+</footer>
+</body>
+</html>
+
+

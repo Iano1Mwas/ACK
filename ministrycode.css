@@ -1,0 +1,56 @@
+/* ...existing code... */
+.clubs-section {
+    margin: 40px auto 0 auto;
+    max-width: 1000px;
+    padding: 0 20px 30px 20px;
+}
+.clubs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.club-card {
+    background: #1e3359;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    padding: 22px 18px;
+    min-width: 220px;
+    max-width: 260px;
+    flex: 1 1 220px;
+    text-align: center;
+    border: 1px solid #274472;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+    position: relative;
+}
+.club-card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 18px #183153;
+    border-color: #ffd700;
+}
+.club-card h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+.club-details {
+    display: none;
+    color: #f2f6fc;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: left;
+}
+.club-card.active .club-details {
+    display: block;
+}
+@media (max-width: 900px) {
+    .clubs-container {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .club-card {
+        max-width: 100%;
+    }
+}
+/* ...existing code... */
